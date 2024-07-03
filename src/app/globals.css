@@ -100,7 +100,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  background-color: azure;
+  background-color: #f0ffff;
 }
 
 a {
@@ -113,3 +113,4 @@ a {
     color-scheme: dark;
   }
 } */
+

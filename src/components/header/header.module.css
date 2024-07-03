@@ -1,33 +1,69 @@
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem 20%;
-    border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 15%;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .profilePhoto {
-    border-top-right-radius: 70px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 5px;
-    width: 50;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 5px;
+  width: 50;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
 
+.profilePhoto:hover {
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 70px;
+  border-top-left-radius: 70px;
 }
 
 .userNameContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
 }
 
 .userName {
-    height: 100%;
-    color: var(--title-color);
-    font-family: "Bona Nova";
+  height: 100%;
+  color: var(--title-color);
+  font-family: "Bona Nova";
+  font-size: 78px;
+}
+
+.socialContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.socialContainer a {
+  text-transform: capitalize;
+  color: var(--border-color);
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 100ms ease;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+}
+
+.socialContainer a:hover {
+  color: var(--title-color);
 }

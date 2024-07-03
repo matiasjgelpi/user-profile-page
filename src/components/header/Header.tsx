@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./header.module.css";
-import { bonaNova } from "../../app/lib/fonts";
+import animations from "../../styles/animations.module.css";
+import { bonaNova, openSans } from "../../app/lib/fonts";
 
 export default function Header(props: {
   userName: string;
@@ -12,21 +13,22 @@ export default function Header(props: {
 }) {
   const { userName, imgUrl, social } = props;
   return (
-    <header className={styles.container}>
+    <header className={`${styles.container} ${openSans.className}`}>
       <Image
-        className={styles.profilePhoto}
+        className={`${styles.profilePhoto} ${animations.borderRadiusAnimation}`}
         src={imgUrl}
         width={250}
         height={250}
-        alt="profile photo"
+        alt={`${userName} profile photo`}
+        title={`${userName} profile photo`}
       ></Image>
       <div className={styles.userNameContainer}>
         <h1 className={`${styles.userName} ${bonaNova.className}`}>
           {userName}
         </h1>
-        {social && <div>
+        {social && <div className={styles.socialContainer}>
           {social?.map((social, index) => {
-            return <div key={index}><a href={social.url} target="_blank">{social.name}</a></div>;
+            return <a key={index} href={social.url} target="_blank">{social.name}</a>;
           })}
         </div>}
       </div>

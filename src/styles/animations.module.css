@@ -1,0 +1,28 @@
+.borderRadiusAnimation {
+  animation: borderRadiusAnimation 1s ease-in-out;
+  -webkit-animation: borderRadiusAnimation 1s ease-in-out;
+}
+
+@keyframes borderRadiusAnimation {
+  0% {
+    background-color: rgba(154, 226, 226, 0.692);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  50% {
+    background-color: rgba(154, 226, 226, 0.9);
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+  100% {
+    background-color: rgba(154, 226, 226, 0.692);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+}
