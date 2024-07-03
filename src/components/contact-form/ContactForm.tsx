@@ -4,6 +4,7 @@ import { useFormState } from "react-dom";
 import { bonaNova, openSans } from "../../app/lib/fonts";
 import { sendMessage } from "../../app/lib/formValidation";
 import styles from "./contactForm.module.css";
+import { useEffect, useRef, useState } from "react";
 
 const initialState = {
   message: "",
@@ -11,14 +12,41 @@ const initialState = {
   name: "",
 };
 export default function ContactForm() {
-  const [state, formAction] = useFormState(sendMessage, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [sended, setSended] = useState<boolean>(false);
+  const [state, formAction] = useFormState(handleSubmit, initialState);
+
+  async function handleSubmit(prevState: any, formData: FormData) {
+    if (sended) setSended(false);
+
+    const res = await sendMessage(prevState, formData);
+
+    if (res.message === "" && res.name === "" && res.mail === "") {
+      setSended(true);
+    }
+    return res;
+  }
+
+  useEffect(() => {
+    if (sended) {
+      formRef.current?.reset();
+    }
+  });
 
   return (
     <section className={`${styles.container} ${openSans.className} `}>
-      <p className={`${styles.title} ${bonaNova.className}`}>Contacto:</p>
+      <div className={styles.header}>
+        <p className={`${styles.title} ${bonaNova.className}`}>Contacto:</p>
+        <p className={`${sended ? styles.sended : styles.notSended} ${styles.messageSended}` }>
+          ¡Mensaje enviado con éxito!
+        </p>
+        
+      </div>
+
       <div className={styles.content}>
         <div className={styles.formContainer}>
-          <form action={formAction}>
+          <form ref={formRef} action={formAction}>
             <label htmlFor="name">
               Nombre:
               <input type="text" name="name" />
@@ -39,4 +67,10 @@ export default function ContactForm() {
       </div>
     </section>
   );
+}
+function handleSubmit(
+  state: { message: string; mail: string; name: string },
+  formAction: (payload: FormData) => void
+) {
+  throw new Error("Function not implemented.");
 }

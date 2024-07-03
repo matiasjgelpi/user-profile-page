@@ -1,8 +1,8 @@
 :root {
   --title-color: rgb(163, 3, 3);
   --border-color: rgb(163, 3, 3, 0.8);
-
-
+  --bg-highlight-color: rgba(154, 226, 226, 0.692);
+  --bg-highlight-color-plus: rgba(154, 226, 226, 0.9);
 
   /* --max-width: 1100px;
   --border-radius: 12px;
@@ -113,4 +113,3 @@ a {
     color-scheme: dark;
   }
 } */
-

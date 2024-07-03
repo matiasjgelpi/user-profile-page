@@ -9,7 +9,7 @@
 .container p:nth-child(2) {
   text-align: justify;
   padding: 1.3rem;
-  background-color: rgba(154, 226, 226, 0.692);
+  background-color: var(--bg-highlight-color);
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 5px;
@@ -22,7 +22,7 @@
 }
 
 .container p:nth-child(2):hover {
-  background-color: rgba(154, 226, 226, 0.9);
+  background-color: var(--bg-highlight-color-plus);
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 50px;

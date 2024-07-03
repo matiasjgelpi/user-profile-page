@@ -32,10 +32,8 @@ export async function sendMessage(prevState: any, formData: FormData) {
     name: formData.get("name"),
     message: formData.get("message"),
   });
-  //   console.log(formData);
 
   if (!validatedFields.success) {
-    console.log(validatedFields.error.flatten().fieldErrors);
     const errors = validatedFields.error.flatten().fieldErrors;
     return {
       message: errors?.message ? errors.message[0] : "",
@@ -43,4 +41,10 @@ export async function sendMessage(prevState: any, formData: FormData) {
       mail: errors?.mail ? errors.mail[0] : "",
     };
   }
+
+  return {
+    message: "",
+    name: "",
+    mail: "",
+  };
 }
