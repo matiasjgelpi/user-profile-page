@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  padding: 1rem 20%;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.container p:nth-child(2) {
+    text-align: justify;
+    padding: 1.3rem;
+    background-color: rgba(154, 226, 226, 0.692);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    
+}
+
+.container p:not(:last-child) {
+  color: var(--title-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+ 
+}

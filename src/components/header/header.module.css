@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 20%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profilePhoto {
+    border-top-right-radius: 70px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 5px;
+    width: 50;
+
+}
+
+.userNameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem 0;
+}
+
+.userName {
+    height: 100%;
+    color: var(--title-color);
+    font-family: "Bona Nova";
+}
