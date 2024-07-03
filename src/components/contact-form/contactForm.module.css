@@ -79,6 +79,20 @@
   background-color: var(--border-color);
   color: white;
   font-weight: 700;
-
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem 10%;
+  }
+
+  .header {
+    padding-bottom: 0;
+  }
+
+  .messageSended {
+    padding: 0.3rem;
+  font-size: 12px;
+  }
 }

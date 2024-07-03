@@ -1,6 +1,7 @@
 import { UserData } from "./types";
 
-export const dummyDataCollection : UserData[] = [{
+export const dummyDataCollection: UserData[] = [
+  {
     userName: "Constanza Schnass",
     imgUrl: "/profilePhoto.jpg",
     aboutText:
@@ -27,4 +28,24 @@ export const dummyDataCollection : UserData[] = [{
         url: "https://www.linkedin.com/in/constanza-s-336199170/",
       },
     ],
-  }];
+  },
+  {
+    userName: "Nina Schnass",
+    imgUrl: "/profilePhotoNina.jpg",
+    aboutText:
+      'Soy Nina Schnass, una perrita curiosa y llena de energía. Nací en un pequeño pueblo llamado "Ladrador" (sí, el nombre es bastante apropiado) y desde cachorra, mi nariz siempre ha estado en busca de aventuras. Mi amor por los huesos y las pelotas es insaciable, y no hay día en que no me lance a perseguir mariposas o a explorar los rincones más recónditos del jardín.',
+    interests: [
+      "Exploración canina",
+      "Juegos al aire libre",
+      "Socialización con otros perros",
+      "Siestas bajo el sol",
+      "Aventuras en el bosque",
+    ],
+    social: [
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/ninalaperrabonita/",
+      },
+    ],
+  },
+];
