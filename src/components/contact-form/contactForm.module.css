@@ -16,16 +16,22 @@
   justify-content: space-between;
 }
 
+.formContainer{
+    width: 100%;
+}
+
 .formContainer form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   font-size: 12px;
+  
 }
 
 .formContainer form label {
   display: flex;
   flex-direction: column;
+ 
 }
 
 .formContainer form input,
@@ -34,4 +40,16 @@
   font-size: 14px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
+}
+
+.formContainer form button {
+    padding: 0.3rem;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--border-color);
+    color: white;
+    font-weight: 700;
+   
+    cursor: pointer;
 }
