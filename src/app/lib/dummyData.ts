@@ -2,6 +2,7 @@ import { UserData } from "./types";
 
 export const dummyDataCollection: UserData[] = [
   {
+    id: 1,
     userName: "Constanza Schnass",
     imgUrl: "/profilePhoto.jpg",
     aboutText:
@@ -30,6 +31,7 @@ export const dummyDataCollection: UserData[] = [
     ],
   },
   {
+    id: 2,
     userName: "Nina Schnass",
     imgUrl: "/profilePhotoNina.jpg",
     aboutText:

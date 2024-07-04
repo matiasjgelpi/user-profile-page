@@ -1,0 +1,12 @@
+.topContainer {
+  padding: 1rem 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userButton {
+    background:transparent;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
