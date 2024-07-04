@@ -5,16 +5,17 @@ import { openSans } from "../../app/lib/fonts";
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useTheme();
-  const [themeName, setThemeName] = useState<string>("Light theme");
+  const [themeName, setThemeName] = useState<string>();
 
   useEffect(() => {
-    if (!theme) {
+    if (!theme || !themeName) {
       setTheme("light");
+      setThemeName("Dark theme");
     }
     const toggledButtonName = theme === "dark" ? "Light theme" : "Dark theme";
 
     setThemeName(toggledButtonName);
-  }, [setThemeName, theme, setTheme]);
+  }, [setThemeName, theme, setTheme, themeName]);
 
   function handleSetTheme() {
     const toggledTheme = theme === "dark" ? "light" : "dark";

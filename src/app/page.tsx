@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <main className={`${userData ? styles.opacity : styles.notOpacity}`}>
-      <div className={`${styles.topContainer} ${openSans.className}`}>
+      <div className={`${styles.topContainer}`}>
         <ThemeChanger></ThemeChanger>
         <button className={`${styles.userButton} ${openSans.className}`} onClick={handleChangeUserData}>
           Siguiente usuario
