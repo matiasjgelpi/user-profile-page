@@ -68,9 +68,3 @@ export default function ContactForm() {
     </section>
   );
 }
-function handleSubmit(
-  state: { message: string; mail: string; name: string },
-  formAction: (payload: FormData) => void
-) {
-  throw new Error("Function not implemented.");
-}

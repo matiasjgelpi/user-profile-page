@@ -7,18 +7,21 @@ export default function ThemeChanger() {
   const [themeName, setThemeName] = useState<string>("Dark");
 
   useEffect(() => {
-    setThemeName(theme === "dark" ? "Light" : "Dark");
-  }, [setThemeName,    theme]);
+    const toggledTheme = theme === "dark" ? "Light theme" : "Dark theme"
+    setThemeName(toggledTheme);
+  }, [setThemeName, theme]);
 
   function handleSetTheme() {
-    setThemeName(theme === "dark" ? "Light" : "Dark");
-    setTheme(theme === "dark" ? "light" : "dark");
+    const toggledTheme = theme === "dark" ? "light" : "dark";
+    const toggledButtonName = theme === "dark" ? "Light theme" : "Dark theme";
+    setThemeName(toggledButtonName);
+    setTheme(toggledTheme);
   }
 
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={handleSetTheme}>
-        {themeName + " theme"}
+        {themeName}
       </button>
     </div>
   );
