@@ -4,12 +4,17 @@ import { useEffect, useState } from "react";
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useTheme();
-  const [themeName, setThemeName] = useState<string>("Dark");
+  const [themeName, setThemeName] = useState<string>("Light theme");
 
   useEffect(() => {
-    const toggledTheme = theme === "dark" ? "Light theme" : "Dark theme"
-    setThemeName(toggledTheme);
-  }, [setThemeName, theme]);
+
+    if(!theme) {
+      setTheme("light");
+    }
+    const toggledButtonName = theme === "dark" ? "Light theme" : "Dark theme";
+
+    setThemeName(toggledButtonName);
+  }, [setThemeName, theme, setTheme]);
 
   function handleSetTheme() {
     const toggledTheme = theme === "dark" ? "light" : "dark";
