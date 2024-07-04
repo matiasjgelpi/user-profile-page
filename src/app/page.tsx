@@ -8,6 +8,7 @@ import ThemeChanger from "../components/theme-changer/ThemeChanger";
 import { dummyDataCollection } from "./lib/dummyData";
 import { UserData } from "./lib/types";
 import styles from "./page.module.css";
+import { openSans } from "./lib/fonts";
 
 function getData(index: number): UserData {
   const userData = dummyDataCollection[index];
@@ -44,9 +45,9 @@ export default function Home() {
 
   return (
     <main className={`${userData ? styles.opacity : styles.notOpacity}`}>
-      <div className={styles.topContainer}>
+      <div className={`${styles.topContainer} ${openSans.className}`}>
         <ThemeChanger></ThemeChanger>
-        <button className={styles.userButton} onClick={handleChangeUserData}>
+        <button className={`${styles.userButton} ${openSans.className}`} onClick={handleChangeUserData}>
           Siguiente usuario
         </button>
       </div>
