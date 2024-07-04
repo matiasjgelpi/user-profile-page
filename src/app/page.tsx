@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import About from "../components/about/About";
 import ContactForm from "../components/contact-form/ContactForm";
 import Header from "../components/header/Header";
@@ -15,26 +15,40 @@ function getData(index: number): UserData {
 }
 
 export default function Home() {
-  const [userData, setUserData] = useState(getData(0));
- 
+  const [userData, setUserData] = useState<UserData | undefined>(undefined);
+
+  useEffect(() => {
+    setUserData(getData(0));
+  }, []);
 
   function handleChangeUserData() {
-    if (userData.id === 1) {
+    if (userData?.id === 1) {
       setUserData(getData(1));
     }
 
-    if (userData.id === 2) {
+    if (userData?.id === 2) {
       setUserData(getData(0));
     }
   }
 
-  const { userName, imgUrl, aboutText, interests, social } = userData;
+  const { userName, imgUrl, aboutText, interests, social } =
+    userData !== undefined
+      ? userData
+      : {
+          userName: "",
+          imgUrl: "",
+          aboutText: "",
+          interests: [],
+          social: [],
+        };
 
   return (
-    <main className={styles.main} >
-      <div className={styles.topContainer} suppressHydrationWarning>
+    <main className={`${userData ? styles.opacity : styles.notOpacity}`}>
+      <div className={styles.topContainer}>
         <ThemeChanger></ThemeChanger>
-        <button className={styles.userButton} onClick={handleChangeUserData}>Siguiente usuario</button>
+        <button className={styles.userButton} onClick={handleChangeUserData}>
+          Siguiente usuario
+        </button>
       </div>
       <Header userName={userName} imgUrl={imgUrl} social={social}></Header>
       <About aboutText={aboutText}></About>

@@ -17,9 +17,10 @@ export default function Header(props: {
     <header className={`${styles.container} ${openSans.className}`}>
       <Image
         className={`${styles.profilePhoto} ${animations.borderRadiusAnimation}`}
-        src={imgUrl}
+        src={imgUrl || '/placeholderImage.jpg'}
         width={250}
         height={250}
+        priority 
         alt={`${userName} profile photo`}
         title={`${userName} profile photo`}
       ></Image>
