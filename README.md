@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este es un sitio para una prueba técnica desarrollado con Next14
+Se trata de una página de pérfil de usuario
+ 
+- Consta de información básica de dos usuarios que se pueden switchear entre sí en el mismo proyecto haciendo click en el botón "Siguiente usuario".
+- Tiene un fórmulario que simula el envío de un mensaje con vlidación mediante la librería [Zod](https://zod.dev/).
+- Se le implementó un darkmode simple usando la librería [next-themes](https://www.npmjs.com/package/next-themes).
+- Tiene algunos test de renderizado con Jest.
+- Tiene algunas animaciones de inicio y en el hover de la sección "Intereses", en la sección "Sobre mí" y en la foto de perfil.
+- Es responsive.
 
-## Getting Started
+## Como usar
 
-First, run the development server:
-
+### Primero clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# git clone https://github.com/matiasjgelpi/user-profile-page.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instala los modulos necesarios:
+```bash
+npm i
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Inicia localmente la aplicación 
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Para correr los test
+```bash
+npm run test
+```
 
-## Learn More
+## Para ver el Deploy 
+[Sigue este link para ver el proyecto desplegado](https://user-profile-page-two.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
