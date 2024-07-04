@@ -1,3 +1,6 @@
+.topContainer {
+  padding: 1rem 15%;
+}
 .container {
   display: flex;
   justify-content: space-between;
