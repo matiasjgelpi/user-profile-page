@@ -1,12 +1,14 @@
 Este es un sitio para una prueba técnica desarrollado con Next14
 Se trata de una página de pérfil de usuario
- 
+
+ ## Resumen
 - Consta de información básica de dos usuarios que se pueden switchear entre sí en el mismo proyecto haciendo click en el botón "Siguiente usuario".
 - Tiene un fórmulario que simula el envío de un mensaje con vlidación mediante la librería [Zod](https://zod.dev/).
 - Se le implementó un darkmode simple usando la librería [next-themes](https://www.npmjs.com/package/next-themes).
 - Tiene algunos test de renderizado con Jest.
 - Tiene algunas animaciones de inicio y en el hover de la sección "Intereses", en la sección "Sobre mí" y en la foto de perfil.
-- Es responsive.
+- Utilicé CSS modules para los estilos.
+- El sitio responsive.
 
 ## Como usar
 
