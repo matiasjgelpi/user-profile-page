@@ -50,6 +50,7 @@
   flex-direction: column;
   gap: 0.5rem;
   font-size: 12px;
+  width: fit-content;
 }
 
 .formContainer form label {
@@ -93,6 +94,6 @@
 
   .messageSended {
     padding: 0.3rem;
-  font-size: 12px;
+    font-size: 12;
   }
 }

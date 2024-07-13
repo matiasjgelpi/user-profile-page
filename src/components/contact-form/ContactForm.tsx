@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormState } from "react-dom";
-import { bonaNova, openSans } from "../../app/lib/fonts";
+import { nunitoSans, openSans } from "../../app/lib/fonts";
 import { sendMessage } from "../../app/lib/formValidation";
 import styles from "./contactForm.module.css";
 import { useEffect, useRef, useState } from "react";
@@ -37,7 +37,7 @@ export default function ContactForm() {
   return (
     <section className={`${styles.container} ${openSans.className} `}>
       <div className={styles.header}>
-        <p className={`${styles.title} ${bonaNova.className}`}>Contacto:</p>
+        <p className={`${styles.title} ${nunitoSans.className}`}>Contacto:</p>
         <p className={`${sended ? styles.sended : styles.notSended} ${styles.messageSended}` }>
           ¡Mensaje enviado con éxito!
         </p>
@@ -58,6 +58,7 @@ export default function ContactForm() {
               <p>{state?.mail}</p>
             </label>
             <label htmlFor="message">
+              Mensaje:
               <textarea name="message" id=""></textarea>
               <p>{state?.message}</p>
             </label>

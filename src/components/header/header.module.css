@@ -43,7 +43,7 @@
 .userName {
   height: 100%;
   color: var(--title-color);
-  font-family: "Bona Nova";
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial;
   font-size: 78px;
 }
 

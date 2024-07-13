@@ -1,17 +1,17 @@
 :root {
-  --title-color: rgb(163, 3, 3);
-  --border-color: rgb(163, 3, 3, 0.8);
-  --bg-highlight-color: rgba(154, 226, 226, 0.692);
-  --bg-highlight-color-plus: rgba(154, 226, 226, 0.9);
-  --bg-color: #f0ffff;
+  --title-color: #E2856E;
+  --border-color: rgba(226, 133, 110, 0.582);
+  --bg-highlight-color: rgba(89, 165, 216, 0.466);
+  --bg-highlight-color-plus: rgba(89, 165, 216, 0.7);;
+  --bg-color: rgba(89, 165, 216, 0.1);
 }
 
 [data-theme='dark'] {
-  --title-color: rgb(163, 3, 3);
-    --border-color: rgb(163, 3, 3, 0.8);
-    --bg-highlight-color: rgba(8, 58, 58, 0.5);
-    --bg-highlight-color-plus: rgba(8, 58, 58, 0.7);
-    --bg-color: rgba(8, 58, 58, 0.1);
+  --title-color: #ECEBE4;
+    --border-color: #ecebe481;
+    --bg-highlight-color: rgba(27, 23, 37, 0.466);
+    --bg-highlight-color-plus: rgba(27, 23, 37, 0.7);
+    --bg-color: rgba(27, 23, 37, 0.1);
 }
 
 

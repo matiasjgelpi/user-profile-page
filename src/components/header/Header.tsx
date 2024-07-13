@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./header.module.css";
 import animations from "../../styles/animations.module.css";
-import { bonaNova, openSans } from "../../app/lib/fonts";
+import { bonaNova, nunitoSans, openSans } from "../../app/lib/fonts";
 import ThemeChanger from "../theme-changer/ThemeChanger";
 
 export default function Header(props: {
@@ -25,7 +25,7 @@ export default function Header(props: {
         title={`${userName} profile photo`}
       ></Image>
       <div className={styles.userNameContainer}>
-        <h1 className={`${styles.userName} ${bonaNova.className}`}>
+        <h1 className={`${styles.userName}`}>
           {userName}
         </h1>
         {social && (
