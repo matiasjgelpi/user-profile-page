@@ -88,6 +88,10 @@
     padding: 1rem 10%;
   }
 
+  .formContainer form {
+    width: 100%;
+  }
+
   .header {
     padding-bottom: 0;
   }
